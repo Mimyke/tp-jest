@@ -3,8 +3,9 @@ const Interval = require('./interval');
 describe('overLaps', function () {
 	var interval = new Interval(2,7);
 	var interval2 = new Interval(8,13);
+	var interval3 = new Interval(3,9);
 	test('Test overlaps de [2,7] et [3,9] => true', () => {
-    		expect(interval.overlaps(new Interval(3,9)).toBe(true);
+    		expect(interval.overlaps(interval3).toBe(true);
 	});
 	test('Test overlaps de [2,7] et [8,13] => false', () => {
     		expect(interval.overlaps(interval2).toBe(false);

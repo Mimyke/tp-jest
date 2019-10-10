@@ -69,7 +69,7 @@ describe('fizzBuzz',function() {
 		expect(Util.fizzBuzz(15)).toEqual(array)
 	});
 	test('Test fizz buzz de 0 => {}', () => {
-		expect(Util.fizzBuzz(0)).toThrow('Tableau commençant à 1');
+		expect(()=> {Util.fizzBuzz(0)}).toThrow('Tableau commençant à 1');
 	});
 });
 
