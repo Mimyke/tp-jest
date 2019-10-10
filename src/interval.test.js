@@ -18,7 +18,7 @@ describe('overLaps', function () {
     		expect(interval2.overlaps(interval)).toBe(false)
 	});
 	test('Test overlaps de [2,7] et [1,0] => throw', () => {
-    		expect(interval.overlaps(interval4)).toThrow('Wrong interval')
+    		expect(() => { interval.overlaps(interval4)}).toThrow('Wrong interval')
 	});
 });
 
