@@ -70,3 +70,34 @@ describe('union', function () {
         expect(interval1.union(interval5)).toEqual(res15)
     });
 });
+
+describe('intersection', function () {
+    var interval1 = new Interval(2,7)
+    var interval2 = new Interval(7,9);
+    var interval3 = new Interval(5,11);
+    var interval4 = new Interval(15,25);
+    var interval5 = new Interval(3,6);
+
+    var res = new Interval(7,7);
+    var res13 = new Interval(5,11);
+
+
+    test('Test intersection de [2,7] et [7,9] => [7,7]', () => { 
+        expect(interval1.intersection(interval2)).toEqual(res)
+    });
+    test('Test intersection de [2,7] et [5,11] => [5,11]', () => { 
+        expect(interval1.intersection(interval3)).toEqual(res12)
+    });
+    test('Test intersection de [5,11] et [2,7] => [5,11]', () => { 
+        expect(interval3.intersection(interval1)).toEqual(res12)
+    });
+    test('Test intersection de [2,7] et [15,25] => Null', () => { 
+        expect(interval1.intersection(interval4)).toBeNull()
+    });
+    test('Test intersection de [2,7] et [3,6] => [3,6]', () => { 
+        expect(interval1.intersection(interval5)).toEqual(interval5)
+    });
+    test('Test intersection de [3,6] et [2,7] => [3,6]', () => { 
+        expect(interval5.intersection(interval1)).toEqual(interval5)
+    });
+});
