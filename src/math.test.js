@@ -68,9 +68,6 @@ describe('fizzBuzz',function() {
 	test('Test fizz buzz de 15 => array', () => {
 		expect(Util.fizzBuzz(15)).toEqual(array)
 	});
-	test('Test fizz buzz de 0 => {}', () => {
-		expect(() => { Util.fizzBuzz(0) }).toThrow('Tableau commençant à 1');
-	});
 });
 
 describe('cipher',function() {
