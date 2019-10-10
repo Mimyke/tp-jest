@@ -110,14 +110,14 @@ describe('exclusion', function () {
     var interval5 = new Interval(3,6);
 
     var res = [new Interval(2,2), new Interval(7,7)];
-    var res13 = [new Interval(2,4), new Interval(6,11)];
+    var res13 = [new Interval(2,4), new Interval(8,11)];
     var res12 = [new Interval(2,6), new Interval(8,9)];
     var res14 = [interval1, interval4];
 
     test('Test exclusion de [2,7] et [3,6] => [[2,2],[7,7]]', () => { 
         expect(interval1.exclusion(interval5)).toEqual(res)
     });
-    test('Test exclusion de [2,7] et [5,11] => [[2,4],[6,11]]', () => { 
+    test('Test exclusion de [2,7] et [5,11] => [[2,4],[8,11]]', () => { 
         expect(interval1.exclusion(interval3)).toEqual(res13)
     });
     test('Test exclusion de [2,7] et [7,9] => [[2,6],[8,9]]', () => { 
