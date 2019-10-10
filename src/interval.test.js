@@ -70,4 +70,3 @@ describe('union', function () {
         expect(interval1.union(interval5)).toEqual(res15)
     });
 });
-
